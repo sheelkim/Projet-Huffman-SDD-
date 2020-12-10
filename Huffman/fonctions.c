@@ -20,8 +20,8 @@ void huffman(void)
 {
     printf("\n");
     Liste liste = occurrence_texte("texte.txt");
-    Arbre t = arbre_huffman(liste);
-    afficher_noeud(t);
+    Arbre arbre = arbre_huffman(liste);
+    afficher_noeud(arbre);
 }
 
 
