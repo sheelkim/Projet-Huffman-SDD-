@@ -29,7 +29,7 @@ void ecriture_texte(char *fichier1, char *fichier2)
     char bit[9];
 
 
-    while ((ch = fgetc(lecture)) != EOF) /// fgetc pour lire un caractère
+    while ((ch = fgetc(lecture)) != EOF) 
     {
         caractere_binaire(ch, bit);
         fprintf(ecriture, "%s", bit);
@@ -83,7 +83,7 @@ Liste occurrence_texte(char *fichier)
 
         if(tmp != NULL)
         {
-            tmp->noeud->occurrence = tmp->noeud->occurrence + 1; // on augmente le nombre d'occurrence
+            tmp->noeud->occurrence = tmp->noeud->occurrence + 1; 
 
         }
         else
@@ -105,8 +105,8 @@ Arbre arbre_huffman(Liste liste)
     if(liste == NULL)
         exit(EXIT_FAILURE);
 
-        Arbre arbre = liste->noeud; /// on rentre dans l'arbre le premier noeud
-        Noeud *noeud1 = NULL; /// 2 noeud pour 1 arbre binaire
+        Arbre arbre = liste->noeud; // on rentre dans l'arbre le premier noeud
+        Noeud *noeud1 = NULL; 
         Noeud *noeud2 = NULL;
 
         while (liste->suiv != NULL)
@@ -131,7 +131,6 @@ Arbre arbre_huffman(Liste liste)
 }
 
 /// pour trouver le plus petit element
-/// on veut modifier la liste donc on fait un double pointeur pour liberer en utilisant free
 Noeud* petit_element(Liste *liste)
 {
     if ((*liste) == NULL){
