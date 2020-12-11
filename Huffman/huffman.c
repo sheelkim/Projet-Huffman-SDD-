@@ -114,7 +114,7 @@ Arbre arbre_huffman(Liste liste)
             noeud1 = petit_element(&liste);
             noeud2 = petit_element(&liste);
 
-            /// on ne met pas de lettre mais juste le nombre de noeud cf. consigne huffman
+            /// on ne met pas de lettre mais juste le nombre d'occurrences cf. consigne huffman
             arbre = creer_noeud(0, noeud1->occurrence + noeud2->occurrence);
             arbre->gauche = noeud1;
             arbre->droit = noeud2;
